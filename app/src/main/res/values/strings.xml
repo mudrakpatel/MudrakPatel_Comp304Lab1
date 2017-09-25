@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MudrakPatel_Comp304Lab2</string>
+    <string name="enterBtnText">Enter</string>
+    <string name="americanCuisineRBtn">American</string>
+    <string name="italianCuisineRBtn">Italian</string>
+    <string name="chineseCuisineRBtn">Chinese</string>
+    <string name="indianCuisineRBtn">Indian</string>
+    <string name="backText">Back</string>
+    <string name="nextText">Next</string>
+</resources>

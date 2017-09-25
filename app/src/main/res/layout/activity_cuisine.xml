@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupCuisineActivity"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/radioGroupMarginTop">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/americanRadioButton"
+            android:text="@string/americanCuisineRBtn"
+            android:textSize="@dimen/radioButtonTextSize"
+            android:layout_marginBottom="@dimen/radioButtonMarginBottom"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/italianRadioButton"
+            android:text="@string/italianCuisineRBtn"
+            android:textSize="@dimen/radioButtonTextSize"
+            android:layout_marginBottom="@dimen/radioButtonMarginBottom"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/chineseRadioButton"
+            android:text="@string/chineseCuisineRBtn"
+            android:textSize="@dimen/radioButtonTextSize"
+            android:layout_marginBottom="@dimen/radioButtonMarginBottom"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/indianRadioButton"
+            android:text="@string/indianCuisineRBtn"
+            android:textSize="@dimen/radioButtonTextSize"/>
+
+    </RadioGroup>
+
+    <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/radioButtonTextSize"
+            android:id="@+id/cuisineBackButton"
+            android:text="@string/backText"
+            android:layout_toLeftOf="@id/radioGroupCuisineActivity"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/radioButtonTextSize"
+        android:id="@+id/cuisineNextButton"
+        android:text="@string/nextText"
+        android:layout_toRightOf="@id/radioGroupCuisineActivity"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

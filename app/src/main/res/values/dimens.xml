@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize25dp">25dp</dimen>
+    <dimen name="radioGroupMarginTop">15dp</dimen>
+    <dimen name="radioButtonTextSize">25dp</dimen>
+    <dimen name="radioButtonMarginBottom">10dp</dimen>
+</resources>
