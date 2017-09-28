@@ -62,6 +62,6 @@
         android:text="@string/nextText"
         android:layout_toRightOf="@id/radioGroupCuisineActivity"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

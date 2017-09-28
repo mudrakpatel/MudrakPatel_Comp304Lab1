@@ -7,4 +7,6 @@
     <string name="indianCuisineRBtn">Indian</string>
     <string name="backText">Back</string>
     <string name="nextText">Next</string>
+    <string name="title_activity_basic">Basic</string>
+    <string name="title_activity_restaurants">RestaurantsActivity</string>
 </resources>

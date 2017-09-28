@@ -1,5 +1,6 @@
 package com.example.mudrakpatel_comp304lab2;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +43,24 @@ public class CuisineActivity extends AppCompatActivity {
                         italianRadioButton.isChecked() ||
                         chineseRadioButton.isChecked() ||
                         indianRadioButton.isChecked()){
-
+                        //Now check which cuisine is selected
+                    if(americanRadioButton.isChecked()){
+                        Intent intent = new Intent(getApplicationContext(), RestaurantsActivity.class);
+                        intent.putExtra("cuisineName", "american");
+                        startActivity(intent);
+                    } else if (italianRadioButton.isChecked()) {
+                        Intent intent = new Intent(getApplicationContext(), RestaurantsActivity.class);
+                        intent.putExtra("cuisineName", "italian");
+                        startActivity(intent);
+                    } else if(chineseRadioButton.isChecked()){
+                        Intent intent = new Intent(getApplicationContext(), RestaurantsActivity.class);
+                        intent.putExtra("cuisineName", "chinese");
+                        startActivity(intent);
+                    } else {
+                        Intent intent = new Intent(getApplicationContext(), RestaurantsActivity.class);
+                        intent.putExtra("cuisineName", "indian");
+                        startActivity(intent);
+                    }
                 } else{
                     //Print a Toast message
                     //to alert the user to

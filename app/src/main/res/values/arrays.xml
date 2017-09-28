@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="americanRestaurantsArray">
+        <item>American Heaven</item>
+        <item>American Paradise</item>
+        <item>American Beyond</item>
+    </string-array>
+    <string-array name="italianRestaurantsArray">
+        <item>Italian Heaven</item>
+        <item>Italian Paradise</item>
+        <item>Italian Beyond</item>
+    </string-array>
+    <string-array name="chineseRestaurantsArray">
+        <item>Chinese Heaven</item>
+        <item>Chinese Paradise</item>
+        <item>Chinese Beyond</item>
+    </string-array>
+    <string-array name="indianRestaurantsArray">
+        <item>Indian Heaven</item>
+        <item>Indian Paradise</item>
+        <item>Indian Beyond</item>
+    </string-array>
+    <string-array name="americanHeavenItemsArray">
+        <item>Hamburger</item>
+        <item>Donut</item>
+        <item>Clam Chowder</item>
+    </string-array>
+    <string-array name="americanParadiseItemsArray">
+        <item>Sandwich</item>
+        <item>Pudding</item>
+        <item>Biscuits</item>
+    </string-array>
+    <string-array name="americanBeyondItemsArray">
+        <item>Veg. Sandwich</item>
+        <item>Chocolate donut</item>
+        <item>Macaroni</item>
+    </string-array>
+    <string-array name="chineseHeavenItemsArray">
+        <item>Tofu</item>
+        <item>Cooked rice</item>
+        <item>Curry</item>
+    </string-array>
+    <string-array name="chineseParadiseItemsArray">
+        <item>Tofu</item>
+        <item>Cooked rice</item>
+        <item>Curry</item>
+    </string-array>
+    <string-array name="chineseBeyondItemsArray">
+        <item>Tofu</item>
+        <item>Cooked rice</item>
+        <item>Curry</item>
+    </string-array>
+    <string-array name="italianHeavenItemsArray">
+        <item>Pizza</item>
+        <item>Pasta</item>
+        <item>Calzone</item>
+    </string-array>
+    <string-array name="italianParadiseItemsArray">
+        <item>Pizza</item>
+        <item>Pasta</item>
+        <item>Calzone</item>
+    </string-array>
+    <string-array name="italianBeyondItemsArray">
+        <item>Pizza</item>
+        <item>Pasta</item>
+        <item>Calzone</item>
+    </string-array>
+    <string-array name="indianParadiseItemsArray">
+        <item>Daal Makhani</item>
+        <item>Khichdi</item>
+        <item>Biryani</item>
+    </string-array>0
+    <string-array name="indianHeavenItemsArray">
+        <item>Daal Makhani</item>
+        <item>Khichdi</item>
+        <item>Biryani</item>
+    </string-array>
+    <string-array name="indianBeyondItemsArray">
+        <item>Daal Makhani</item>
+        <item>Khichdi</item>
+        <item>Biryani</item>
+    </string-array>
+</resources>

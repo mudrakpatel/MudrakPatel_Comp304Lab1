@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CuisineActivity"></activity>
+        <activity android:name=".CuisineActivity" />
+        <activity
+            android:name=".RestaurantsActivity"
+            android:label="@string/title_activity_restaurants"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MenuActivity"></activity>
     </application>
 
 </manifest>
