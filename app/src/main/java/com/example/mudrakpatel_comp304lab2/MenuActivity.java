@@ -7,9 +7,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+
 public class MenuActivity extends AppCompatActivity {
     String restaurantName;
     String[] itemNames = {};
+    ArrayList<CheckBox> checkBoxesArray = new ArrayList<>();
+    public ArrayList<String> userOrderArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("American Paradise")){
@@ -36,6 +41,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("American Beyond")){
@@ -45,6 +51,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Italian Heaven")){
@@ -54,6 +61,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Italian Paradise")){
@@ -63,6 +71,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Italian Beyond")){
@@ -72,6 +81,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Chinese Heaven")){
@@ -81,6 +91,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Chinese Paradise")){
@@ -90,6 +101,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Chinese Beyond")){
@@ -99,6 +111,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Indian Heaven")){
@@ -108,6 +121,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Indian Paradise")){
@@ -117,6 +131,7 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         } else if(restaurantName.equals("Indian Beyond")){
@@ -126,15 +141,37 @@ public class MenuActivity extends AppCompatActivity {
                 CheckBox checkBox = new CheckBox(getApplicationContext());
                 checkBox.setText(itemName);
                 checkBox.setTextSize(25);
+                checkBoxesArray.add(checkBox);
                 linearLayoutMenu.addView(checkBox);
             }
         }
+
+        //Create a button
+        //The Button will be next button
+        Button nextButton = new Button(getApplicationContext());
+        nextButton.setText("Next");
+        nextButton.setHeight(35);
+        nextButton.setTextSize(25);
+        linearLayoutMenu.addView(nextButton);
+        //Set a click event listener on the Button
+        nextButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                //Check which checkboxes are checked and add them to the order
+                for(CheckBox checkBox : checkBoxesArray){
+                    if(checkBox.isChecked()){
+                        userOrderArray.add(checkBox.getText().toString());
+                    }
+                }
+            }
+        });
 
         //Declare the Button backBtnMenu
         Button backBtnMenu = (Button) findViewById(R.id.backBtnMenu);
         //Attach a click/tap event listener
         backBtnMenu.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
+                //Remove all items from the order
+                userOrderArray.clear();
                 onBackPressed();
             }
         });

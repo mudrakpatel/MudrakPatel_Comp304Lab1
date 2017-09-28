@@ -21,7 +21,8 @@
             android:name=".RestaurantsActivity"
             android:label="@string/title_activity_restaurants"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".OrderActivity"></activity>
     </application>
 
 </manifest>

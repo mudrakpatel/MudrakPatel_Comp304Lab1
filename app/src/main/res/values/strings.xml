@@ -9,4 +9,5 @@
     <string name="nextText">Next</string>
     <string name="title_activity_basic">Basic</string>
     <string name="title_activity_restaurants">RestaurantsActivity</string>
+    <string name="title_activity_order">OrderActivity</string>
 </resources>
