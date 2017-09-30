@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:id="@+id/rrelativeLayoutOrderActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/relativeLayoutOrderActivity">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nameEditText"
+        android:hint="@string/nameHint" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favouriteItemEditText"
+        android:hint="@string/favouriteItemString"
+        android:layout_below="@+id/nameEditText"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/favouriteCuisineEditText"
+        android:hint="@string/favouriteCuisineEditText"
+        android:layout_below="@+id/favouriteItemEditText"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addressEditText"
+        android:hint="@string/addressEditText"
+        android:layout_below="@+id/favouriteCuisineEditText"/>
+    
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/creditCardNumberEditText"
+        android:layout_below="@+id/addressEditText"
+        android:inputType="number"
+        android:maxLength="16"
+        android:hint="@string/creditCardNumberText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderListTextView"
+        android:text="@string/orderListTextView"
+        android:textSize="@dimen/radioButtonTextSize"
+        android:layout_below="@+id/creditCardNumberEditText"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orderItemScrollView"
+        android:layout_below="@+id/orderListTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayoutInScrollView"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/backText"
+        android:id="@+id/backButtonOrder"
+        android:textSize="@dimen/radioButtonTextSize"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/nextText"
+        android:id="@+id/nextButtonOrder"
+        android:textSize="@dimen/radioButtonTextSize"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>

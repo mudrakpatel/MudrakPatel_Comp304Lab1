@@ -77,16 +77,16 @@ public class RestaurantsActivity extends AppCompatActivity {
         for(String itemString : menuItemsStrings){
             //Add menuItem to the menu
             final MenuItem menuItem = menu.add(itemString);
-            //Attach a click/tap event listener to the menuItem
-            menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
-                    intent.putExtra("restaurantName", menuItem.getTitle());
-                    startActivity(intent);
-                    return true;
-                }
-            });
+                //Attach a click/tap event listener to the menuItem
+                menuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
+                        intent.putExtra("restaurantName", menuItem.getTitle());
+                        startActivity(intent);
+                        return true;
+                    }
+                });
         }
 
         return true;

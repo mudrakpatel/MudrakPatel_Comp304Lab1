@@ -10,4 +10,10 @@
     <string name="title_activity_basic">Basic</string>
     <string name="title_activity_restaurants">RestaurantsActivity</string>
     <string name="title_activity_order">OrderActivity</string>
+    <string name="nameHint">Name</string>
+    <string name="addressEditText">Address</string>
+    <string name="creditCardNumberText">Credit Card Number</string>
+    <string name="favouriteItemString">Favourite Item</string>
+    <string name="favouriteCuisineEditText">Favourite cuisine</string>
+    <string name="orderListTextView"><u>Your order:</u></string>
 </resources>

@@ -1,11 +1,13 @@
 package com.example.mudrakpatel_comp304lab2;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -13,10 +15,12 @@ public class MenuActivity extends AppCompatActivity {
     String restaurantName;
     String[] itemNames = {};
     ArrayList<CheckBox> checkBoxesArray = new ArrayList<>();
-    public ArrayList<String> userOrderArray = new ArrayList<>();
+
+    public static ArrayList<String> userOrderArray = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         restaurantName = getIntent().getStringExtra("restaurantName");
@@ -152,7 +156,6 @@ public class MenuActivity extends AppCompatActivity {
         nextButton.setText("Next");
         nextButton.setHeight(35);
         nextButton.setTextSize(25);
-        linearLayoutMenu.addView(nextButton);
         //Set a click event listener on the Button
         nextButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
@@ -162,8 +165,17 @@ public class MenuActivity extends AppCompatActivity {
                         userOrderArray.add(checkBox.getText().toString());
                     }
                 }
+                //The userOrderArray should not be empty
+                if(userOrderArray.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "PLEASE SELECT AT LEAST ONE ITEM", Toast.LENGTH_SHORT).show();
+                } else{
+                    //start the next activity i.e. OrderActivity
+                    Intent intent = new Intent(getApplicationContext(), OrderActivity.class);
+                    startActivity(intent);
+                }
             }
         });
+        linearLayoutMenu.addView(nextButton);
 
         //Declare the Button backBtnMenu
         Button backBtnMenu = (Button) findViewById(R.id.backBtnMenu);
